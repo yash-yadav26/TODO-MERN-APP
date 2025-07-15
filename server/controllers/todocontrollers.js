@@ -14,7 +14,7 @@ try {
     }
 const todo = await  todoModel({title , description ,createdBy})
 
-// save 
+// save task in Db
 todo.save().then(()=>{
     console.log('todo created');
     return res.status(200).send({
