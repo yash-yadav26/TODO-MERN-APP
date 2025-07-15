@@ -25,7 +25,7 @@ if(exsistingUser){
 const salt  = await  bcrypt.genSalt(10)
 const hashedpassword = await bcrypt.hash(password , salt)
 
-// save user 
+// save user  
 const newUser = new userModel({username , email , password:hashedpassword})
 await newUser.save()
 res.status(200).send({
